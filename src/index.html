@@ -7,9 +7,16 @@
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/selectize.bootstrap3.css">
 		<link rel="stylesheet" type="text/css" href="css/app.min.css">
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/selectize.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/ui-bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/ui-bootstrap-tpls.min.js"></script>
+		<script type="text/javascript" src="js/app.min.js"></script>
 	</head>
 
-	<body ng-app="githubStarTagger" ng-controller="starsController" ng-init="init()">
+	<body ng-app="githubStarTagger" ng-controller="starsController" ng-init="init()" ng-cloak>
 		<header class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-brand">
@@ -96,12 +103,5 @@
 				</tfoot>
 			</table>
 		</div>
-
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/selectize.min.js"></script>
-		<script type="text/javascript" src="js/angular.min.js"></script>
-		<script type="text/javascript" src="js/ui-bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/ui-bootstrap-tpls.min.js"></script>
-		<script type="text/javascript" src="js/app.min.js"></script>
 	</body>
 </html>
