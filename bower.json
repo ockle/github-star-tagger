@@ -1,0 +1,20 @@
+{
+  "name": "github-star-tagger",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "angular": "~1.2.16",
+    "fontawesome": "~4.1",
+    "angular-bootstrap": "~0.11.0",
+    "selectize": "~0.9.1"
+  }
+}

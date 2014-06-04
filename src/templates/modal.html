@@ -1,0 +1,20 @@
+<div class="modal-header">
+	<h3>Settings</h3>
+</div>
+<form class="modal-body">
+	<div class="form-group" ng-class="{'has-error': usernameError, 'has-feedback': usernameError}">
+		<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-github-alt"></i></span>
+			<input type="text" class="form-control" placeholder="Github username" ng-model="username" typeahead="username for username in allUsernames | filter:$viewValue">
+			<span class="input-group-btn">
+				<button type="button" class="btn btn-default" ng-click="username = ''"><i class="fa fa-times"></i></button>
+			</span>
+		</div>
+		<i class="fa fa-exclamation-circle form-control-feedback" ng-show="usernameError"></i>
+		<p class="text-center text-danger" ng-show="usernameError">{{ usernameError }}</p>
+	</div>
+</form>
+<div class="modal-footer">
+	<button type="button" class="btn btn-success" ng-click="loadStars(username)"><i class="fa fa-refresh"></i> Load from Github</button>
+	<button type="button" class="btn" ng-click="settingsModal.close()"><i class="fa fa-times"></i> Cancel</button>
+</div>
