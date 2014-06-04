@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+  var publicDirectory = grunt.option('dir') || 'public';
+
   grunt.initConfig({
     ngtemplates: {
       githubStarTagger: {
@@ -59,7 +61,7 @@ module.exports = function(grunt) {
       },
       css: {
         options: {
-          destPrefix: 'public/css'
+          destPrefix: publicDirectory + '/css'
         },
         files: {
           'bootstrap.min.css': 'bootstrap/dist/css/bootstrap.min.css',
@@ -69,7 +71,7 @@ module.exports = function(grunt) {
       },
       js: {
         options: {
-          destPrefix: 'public/js'
+          destPrefix: publicDirectory + '/js'
         },
         files: {
           'bootstrap.min.js': 'bootstrap/dist/js/bootstrap.min.js',
@@ -82,7 +84,7 @@ module.exports = function(grunt) {
       },
       fonts: {
         options: {
-          destPrefix: 'public/fonts'
+          destPrefix: publicDirectory + '/fonts'
         },
         files: {
           '': 'fontawesome/fonts/*'
@@ -94,19 +96,19 @@ module.exports = function(grunt) {
         files: [
           {
             src: 'dist/js/*',
-            dest: 'public/js/',
+            dest: publicDirectory + '/js/',
             expand: true,
             flatten: true
           },
           {
             src: 'dist/css/*',
-            dest: 'public/css/',
+            dest: publicDirectory + '/css/',
             expand: true,
             flatten: true
           },
           {
             src: 'dist/index.html',
-            dest: 'public/index.html'
+            dest: publicDirectory + '/index.html'
           }
         ]
       }
